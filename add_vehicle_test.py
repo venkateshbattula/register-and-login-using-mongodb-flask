@@ -7,9 +7,9 @@ from Admin_23_09_19 import client
 import struct
 
 app = Flask(__name__)
-@app.route('/wego/admin/add_vehicle', methods=['POST', 'GET'])
+@app.route('/admin/add_vehicle', methods=['POST', 'GET'])
 def New_vehicle_test():
-    db = client.WEGO
+    db = client.db
     coll = db.vehicles
     vehicle_name = request.json['vehicle_name']
     model = request.json['model']
